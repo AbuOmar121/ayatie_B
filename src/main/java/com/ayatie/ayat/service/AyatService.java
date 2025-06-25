@@ -22,15 +22,15 @@ public class AyatService {
         return ayatRepository.findAll();
     }
 
-    public Optional<Ayat> getAyatById(String id) {
+    public Optional<Ayat> getAyatById(int id) {
         return ayatRepository.findById(id);
     }
 
-    public void deleteAyat(String id) {
+    public void deleteAyat(int id) {
         ayatRepository.deleteById(id);
     }
 
-    public Ayat updateAyat(String id, Ayat updatedAyat) {
+    public Ayat updateAyat(int id, Ayat updatedAyat) {
         updatedAyat.setAid(id);
         return ayatRepository.save(updatedAyat);
     }

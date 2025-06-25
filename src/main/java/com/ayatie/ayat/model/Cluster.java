@@ -9,21 +9,21 @@ import jakarta.persistence.Table;
 public class Cluster {
 
     @Id
-    private String cid;
+    private int cid;
 
     private String cname;
 
     // Constructors
     public Cluster() {}
 
-    public Cluster(String cid, String cname) {
+    public Cluster(int cid, String cname) {
         this.cid = cid;
         this.cname = cname;
     }
 
     // Getters and setters
-    public String getCid() { return cid; }
-    public void setCid(String cid) { this.cid = cid; }
+    public int getCid() { return cid; }
+    public void setCid(int cid) { this.cid = cid; }
 
     public String getCname() { return cname; }
     public void setCname(String cname) { this.cname = cname; }

@@ -9,16 +9,16 @@ import jakarta.persistence.Table;
 public class Ayat {
 
     @Id
-    private String aid;
+    private int aid;
 
     private int surahNo;
     private int ayahNo;
-    private String cid;
+    private int cid;
 
     // Constructors
     public Ayat() {}
 
-    public Ayat(String aid, int surahNo, int ayahNo, String cid) {
+    public Ayat(int aid, int surahNo, int ayahNo, int cid) {
         this.aid = aid;
         this.surahNo = surahNo;
         this.ayahNo = ayahNo;
@@ -26,8 +26,8 @@ public class Ayat {
     }
 
     // Getters and setters
-    public String getAid() { return aid; }
-    public void setAid(String aid) { this.aid = aid; }
+    public int getAid() { return aid; }
+    public void setAid(int aid) { this.aid = aid; }
 
     public int getSurahNo() { return surahNo; }
     public void setSurahNo(int surahNo) { this.surahNo = surahNo; }
@@ -35,6 +35,6 @@ public class Ayat {
     public int getAyahNo() { return ayahNo; }
     public void setAyahNo(int ayahNo) { this.ayahNo = ayahNo; }
 
-    public String getCid() { return cid; }
-    public void setCid(String cid) { this.cid = cid; }
+    public int getCid() { return cid; }
+    public void setCid(int cid) { this.cid = cid; }
 }

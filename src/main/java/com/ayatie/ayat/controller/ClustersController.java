@@ -26,12 +26,12 @@ public class ClustersController {
     }
 
     @PutMapping("/{id}")
-    public Cluster updateCluster(@PathVariable String id, @RequestBody Cluster cluster) {
+    public Cluster updateCluster(@PathVariable int id, @RequestBody Cluster cluster) {
         return clustersService.updateCluster(id, cluster);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCluster(@PathVariable String id) {
+    public void deleteCluster(@PathVariable int id) {
         clustersService.deleteCluster(id);
     }
 }

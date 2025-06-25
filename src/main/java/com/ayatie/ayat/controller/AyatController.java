@@ -26,12 +26,12 @@ public class AyatController {
     }
 
     @PutMapping("/{id}")
-    public Ayat updateAyat(@PathVariable String id, @RequestBody Ayat ayat) {
+    public Ayat updateAyat(@PathVariable int id, @RequestBody Ayat ayat) {
         return ayatService.updateAyat(id, ayat);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteAyat(@PathVariable String id) {
+    public void deleteAyat(@PathVariable int id) {
         ayatService.deleteAyat(id);
     }
 }
