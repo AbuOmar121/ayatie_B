@@ -2,7 +2,6 @@ package com.ayatie.ayat.controller;
 
 import com.ayatie.ayat.model.Cluster;
 import com.ayatie.ayat.service.ClustersService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.List;
 @CrossOrigin
 public class ClustersController {
 
-    @Autowired
     private ClustersService clustersService;
 
     @GetMapping

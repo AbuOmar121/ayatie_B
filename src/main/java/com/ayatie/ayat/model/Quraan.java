@@ -7,7 +7,8 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "quraan")
 public class Quraan {
-@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sr_no")
     @JsonProperty("srNo")
     private int srNo;
@@ -46,7 +47,6 @@ public class Quraan {
         this.ayahNo = ayahNo;
     }
 
-    // Getters and Setters...
     public int getSrNo() { return srNo; }
     public void setSrNo(int srNo) { this.srNo = srNo; }
 

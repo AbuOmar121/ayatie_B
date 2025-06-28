@@ -15,13 +15,12 @@ CREATE TABLE ayat (
 );
 
 CREATE TABLE quraan (
-  sr_no INT PRIMARY KEY,
+  sr_no INT AUTO_INCREMENT PRIMARY KEY,
   surah_no INT NOT NULL,
+  ayah_no INT NOT NULL,
   surah_name VARCHAR(255) NOT NULL,
-  classification VARCHAR(50),
   original_arabic_text TEXT NOT NULL,
-  arabic_text TEXT NOT NULL,
-  ayah_no INT NOT NULL
+  arabic_text TEXT NOT NULL
 );
 
 CREATE TABLE surdata (
@@ -29,5 +28,11 @@ CREATE TABLE surdata (
   surah_name VARCHAR(255) NOT NULL,
   ayat_no INT NOT NULL
 );
+
+
+-- DELETE FROM quraan WHERE sr_no = 0;
+
+-- ALTER TABLE quraan MODIFY sr_no INT AUTO_INCREMENT PRIMARY KEY;
+-- ALTER TABLE quraan AUTO_INCREMENT = 1;
 
 -- drop database ayatie
